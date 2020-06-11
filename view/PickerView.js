@@ -151,7 +151,7 @@ class PickerView extends BaseComponent {
             if (isNaN(toValue)) {
             } else {
                 //onSeleted
-                Animated.timing(this.path, { toValue: toValue, duration: 200 }).start(() => {
+                Animated.timing(this.path, { toValue: toValue, duration: 200,useNativeDriver: true}).start(() => {
                     this.onSeleted(Math.abs(toValue / this.props.itemHeight - 2));
                 });
             }
